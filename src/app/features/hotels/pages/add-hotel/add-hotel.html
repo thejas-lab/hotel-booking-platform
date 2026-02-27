@@ -1,0 +1,27 @@
+<div class="form-container">
+  <h2>Add New Hotel</h2>
+
+  <form (ngSubmit)="addHotel()">
+
+    <input type="text" placeholder="Hotel Name"
+      [(ngModel)]="newHotel.name" name="name" required />
+
+    <input type="text" placeholder="Description"
+      [(ngModel)]="newHotel.description" name="description" required />
+
+    <input type="text" placeholder="City"
+      [(ngModel)]="newHotel.city" name="city" required />
+
+    <input type="text" placeholder="Address"
+      [(ngModel)]="newHotel.address" name="address" required />
+
+    <input type="number" placeholder="Latitude"
+      [(ngModel)]="newHotel.latitude" name="latitude" required />
+
+    <input type="number" placeholder="Longitude"
+      [(ngModel)]="newHotel.longitude" name="longitude" required />
+
+    <button type="submit">Save Hotel</button>
+
+  </form>
+</div>

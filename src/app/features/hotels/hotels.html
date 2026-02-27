@@ -1,0 +1,18 @@
+<div class="container">
+
+  <div class="header">
+    <h2>Hotel Listings</h2>
+    <a routerLink="/hotels/add" class="add-btn">+ Add Hotel</a>
+  </div>
+
+  <div class="hotel-grid">
+    <div class="hotel-card" *ngFor="let hotel of hotels">
+      <h3>{{ hotel.name }}</h3>
+      <p><strong>City:</strong> {{ hotel.city }}</p>
+      <p><strong>Address:</strong> {{ hotel.address }}</p>
+      <p><strong>Description:</strong> {{ hotel.description }}</p>
+      <p><strong>Rating:</strong> ⭐ {{ hotel.rating }}</p>
+    </div>
+  </div>
+
+</div>
