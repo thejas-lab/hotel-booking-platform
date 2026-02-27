@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { HotelsServices, Hotel } from './hotels.services';
+import { HotelService, Hotel } from './hotels.services';
 
 @Component({
   selector: 'app-hotels',
@@ -14,14 +14,14 @@ export class HotelsComponent implements OnInit {
 
   hotels: Hotel[] = [];
 
-  constructor(private hotelsServices: HotelsServices) {}
+  constructor(private hotelService: HotelService) {}
 
   ngOnInit(): void {
     this.loadHotels();
   }
 
   loadHotels(): void {
-    this.hotelsServices.getHotels().subscribe({
+    this.hotelService.getHotels().subscribe({
       next: (data) => this.hotels = data,
       error: (err) => console.error(err)
     });
