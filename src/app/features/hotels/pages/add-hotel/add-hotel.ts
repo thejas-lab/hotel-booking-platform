@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
-import { HotelsService } from '../../hotels.service';
+import { HotelsServices } from './features/hotels/hotels.services';
 
 @Component({
   selector: 'app-add-hotel',
@@ -14,7 +14,7 @@ import { HotelsService } from '../../hotels.service';
 export class AddHotelComponent {
 
   constructor(
-    private hotelService: HotelsService,
+    private hotelsServices: HotelsServices,
     private router: Router
   ) {}
 
@@ -28,7 +28,7 @@ export class AddHotelComponent {
   };
 
   addHotel() {
-    this.hotelService.createHotel(this.newHotel).subscribe({
+    this.hotelsServices.createHotel(this.newHotel).subscribe({
       next: (res: any) => {
         console.log('Hotel added', res);
         this.router.navigate(['/hotels']);
