@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
-import { HotelsServices } from './features/hotels/hotels.services';
+import { HotelsServices } from '../../hotels.services';
 
 @Component({
   selector: 'app-add-hotel',
